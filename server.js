@@ -56,6 +56,19 @@ http.createServer(async(req,res)=>{
     if(req.method==='GET'){
       if(p==='/')return page(res,'index.html');
       if(p==='/admin')return page(res,'admin.html');
+      if(p==='/hero.jpg'){
+  try {
+    const b = fs.readFileSync(path.join(D, 'hero.jpg'));
+    res.writeHead(200, {
+      'Content-Type': 'image/jpeg',
+      'Cache-Control': 'public, max-age=3600'
+    });
+    return res.end(b);
+  } catch {
+    res.writeHead(404);
+    return res.end('hero.jpg not found');
+  }
+}
       if(p.startsWith('/uploads/')){const n=p.slice(9);if(!IMG.test(n))return send(res,404,{error:'Not found'});try{const b=fs.readFileSync(path.join(UP,n));res.writeHead(200,{'Content-Type':MIME[n.split('.')[1]],'Cache-Control':'public, max-age=31536000, immutable'});return res.end(b)}catch{return send(res,404,{error:'Not found'})}}
       if(p==='/api/products')return send(res,200,db.products.filter(x=>x.status==='published').map(pub));
       if(p==='/api/config')return send(res,200,{announcement:db.settings.announcement,paymentsReady:RZ,shipping:SHIP});
