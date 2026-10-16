@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YUORA — Light Your Moments.</title>
+<meta name="description" content="YUORA candles for thoughtful gifts and beautiful spaces. Storefront preview.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#FAF7F1;--beige:#E9DED0;--gold:#C4A36A;--brown:#786451;--char:#302B27;--white:#fff;--bg:var(--ivory);--surface:var(--white);--text:var(--char);--muted:var(--brown);--line:var(--beige);--gold-text:#8a6d36;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1b18;--surface:#2a2521;--text:#f3ece1;--muted:#cdb99c;--line:#463e37;--gold-text:#d9bb85}}
+:root[data-theme="dark"]{--bg:#1f1b18;--surface:#2a2521;--text:#f3ece1;--muted:#cdb99c;--line:#463e37;--gold-text:#d9bb85}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--sans)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0 0 .5em}
+h1{font-size:clamp(2.8rem,8vw,5.5rem)}h2{font-size:clamp(1.9rem,4vw,2.8rem)}h3{font-size:1.4rem}
+p{max-width:60ch}a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold-text);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.bar{background:var(--char);color:var(--ivory);text-align:center;font-size:.85rem;padding:8px 12px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;min-height:64px;flex-wrap:wrap}
+.logo{font-family:var(--serif);font-size:1.8rem;letter-spacing:.32em;font-weight:600;text-decoration:none;margin-right:auto;background:none;border:0;color:inherit;padding:0}
+.nav a.l,.nav button.l{background:none;border:0;color:inherit;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent}
+.nav .l:hover{border-color:var(--gold)}
+.ic{background:none;border:1px solid var(--line);color:inherit;border-radius:20px;padding:6px 14px}
+.btn{display:inline-block;background:var(--char);color:var(--ivory);border:1px solid var(--char);padding:13px 28px;text-decoration:none;border-radius:2px}
+.btn:hover{background:var(--brown);border-color:var(--brown)}
+.btn.alt{background:transparent;color:var(--text);border-color:var(--text)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:64px 0}
+.hero .art{background:var(--beige);aspect-ratio:4/5;display:flex;align-items:flex-end;justify-content:center;position:relative;overflow:hidden}
+.glow{position:absolute;left:50%;top:22%;width:70%;aspect-ratio:1;transform:translateX(-50%);background:radial-gradient(circle,rgba(196,163,106,.55),transparent 65%);animation:breathe 5s ease-in-out infinite}
+@keyframes breathe{50%{opacity:.6;transform:translateX(-50%) scale(1.08)}}
+@media (prefers-reduced-motion:reduce){.glow{animation:none}}
+.tag{font-size:.8rem;color:var(--muted);margin-top:8px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px}
+.card{background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column}
+.card .img{background:var(--beige);aspect-ratio:1;display:flex;align-items:flex-end;justify-content:center;cursor:pointer;border:0;padding:0;width:100%}
+.card .b{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .b h3{margin:0;font-size:1.3rem}
+.price{font-weight:500}
+.badge{font-size:.75rem;color:var(--gold-text);border:1px solid var(--gold);padding:1px 8px;border-radius:10px;align-self:flex-start}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.tile{background:var(--beige);color:#302B27;padding:36px 20px;font-family:var(--serif);font-size:1.5rem;border:0;text-align:left}
+.tile:hover{background:var(--gold)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+input,select{font:inherit;padding:10px 12px;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:2px;min-width:0}
+label{display:block;font-size:.9rem;margin-bottom:4px}
+.note{background:var(--beige);color:#302B27;padding:10px 14px;font-size:.9rem;margin:16px 0}
+footer{background:var(--char);color:var(--ivory);padding:48px 0 32px;margin-top:40px}
+footer a,footer button.fl{color:var(--ivory);background:none;border:0;padding:0;text-decoration:underline;display:block;margin:4px 0;text-align:left}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--bg);border-left:1px solid var(--line);z-index:30;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(20px + env(safe-area-inset-bottom,0px))}
+.drawer.open{transform:none}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:20;display:none}.scrim.open{display:block}
+.lines{flex:1;overflow:auto}
+.ln{display:grid;grid-template-columns:56px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}
+.ln .th{background:var(--beige);aspect-ratio:1}
+.q{display:inline-flex;align-items:center;gap:8px}
+.q button{width:30px;height:30px;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.crumb{background:none;border:0;color:var(--muted);padding:0;margin:24px 0 8px;text-decoration:underline}
+@media (max-width:760px){.hero,.two{grid-template-columns:1fr}.hero{padding:32px 0}.nav{gap:12px}}
+</style>
+</head>
+<body>
+<div class="bar">Free-text announcement — editable by the owner in the admin dashboard (backend stage).</div>
+<header class="top"><div class="wrap nav">
+<button class="logo" data-go="home" aria-label="YUORA home">YUORA</button>
+<nav class="nav" style="gap:18px;min-height:0" aria-label="Main">
+<button class="l" data-go="shop">Shop All</button>
+<button class="l" data-go="collections">Collections</button>
+<button class="l" data-go="gifts">Gifts</button>
+<button class="l" data-go="story">Our Story</button></nav>
+<button class="ic" data-go="search" aria-label="Search">Search</button>
+<button class="ic" data-go="account" aria-label="Account">Account</button>
+<button class="ic" id="cartBtn" aria-label="Open cart">Cart (<span id="cnt">0</span>)</button>
+</div></header>
+
+<main id="view" class="wrap" tabindex="-1"></main>
+
+<footer><div class="wrap fg">
+<div><div class="logo" style="margin:0 0 8px">YUORA</div><p>Light Your Moments.</p>
+<p style="font-size:.9rem">Support email, phone and social links: to be configured by the owner.</p></div>
+<div><strong>Shop</strong><button class="fl" data-go="shop">Shop All</button><button class="fl" data-go="collections">Collections</button><button class="fl" data-go="gifts">Gifts</button></div>
+<div><strong>Information</strong><button class="fl" data-go="story">Our Story</button><button class="fl" data-go="p:Shipping Policy">Shipping Policy</button><button class="fl" data-go="p:Returns and Refunds Policy">Returns and Refunds</button><button class="fl" data-go="p:Privacy Policy">Privacy Policy</button><button class="fl" data-go="p:Terms and Conditions">Terms and Conditions</button><button class="fl" data-go="p:FAQ">FAQ</button></div>
+<div><form id="nl" novalidate><label for="nlE"><strong>Newsletter</strong></label>
+<input id="nlE" type="email" placeholder="Email address" autocomplete="email" style="width:100%">
+<label style="margin-top:8px;display:flex;gap:8px"><input id="nlC" type="checkbox" style="min-width:auto"> I agree to receive YUORA emails and can unsubscribe any time.</label>
+<button class="btn" style="margin-top:8px" type="submit">Subscribe</button><p id="nlM" role="status" style="font-size:.85rem"></p></form></div>
+</div></footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Cart" aria-hidden="true">
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0">Your cart</h2><button class="ic" id="closeCart">Close</button></div>
+<div class="lines" id="lines"></div><div id="tot"></div></aside>
+
+<script>
+let PRODUCTS=[],COLLS=[],CFG={};
+const fmt=n=>"₹"+n.toLocaleString("en-IN");
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let cart=[];
+try{cart=JSON.parse(localStorage.getItem("yuora_cart")||"[]")}catch(e){cart=[]}
+function save(){try{localStorage.setItem("yuora_cart",JSON.stringify(cart))}catch(e){}}
+const pic=(p,s)=>p.imgs&&p.imgs[0]?`<img src="/uploads/${p.imgs[0]}" alt="${esc(p.name)}" loading="lazy" style="width:100%;height:100%;object-fit:cover">`:candle(p.col,s);
+function candle(c,s){return `<svg viewBox="0 0 100 120" width="${s||"60%"}" role="img" aria-label="Placeholder candle illustration" style="display:block"><ellipse cx="50" cy="38" rx="6" ry="11" fill="#C4A36A"/><rect x="49" y="46" width="2" height="8" fill="#302B27"/><rect x="22" y="54" width="56" height="58" rx="3" fill="${c}" stroke="#786451" stroke-opacity=".4"/></svg>`}
+function prodCard(p){return `<article class="card"><button class="img" data-go="prod:${p.id}" aria-label="View ${esc(p.name)}">${pic(p)}</button><div class="b">${p.ph?'<span class="badge">Placeholder</span>':''}<h3>${esc(p.name)}</h3><span class="price">${fmt(p.price)}</span><button class="btn alt" style="margin-top:auto" data-add="${p.id}">Add to cart</button></div></article>`}
+const views={
+home(){return `<section style="border:0" class="hero"><div><h1>Light Your Moments.</h1><p>Candles for thoughtful gifts and beautiful spaces.</p><button class="btn" data-go="shop">Shop the Collection</button></div><div><div class="art"><div class="glow"></div>${candle("#E9DED0","46%")}</div><p class="tag">Placeholder illustration. Product photography replaces this.</p></div></section>
+<section><h2>Featured</h2><div class="grid">${PRODUCTS.slice(0,4).map(prodCard).join("")||"<p>Products will appear here once the owner publishes them.</p>"}</div></section>
+<section><h2>Collections</h2><div class="tiles">${COLLS.map(c=>`<button class="tile" data-go="shop:${c}">${c}</button>`).join("")}</div></section>
+<section><h2>Bestsellers</h2><p>Bestsellers appear here once real sales data exists.</p></section>
+<section class="two"><div><h2>Our story</h2><p>The YUORA story is written by the owner. This space is reserved for the real brand story.</p><button class="btn alt" data-go="story">Read more</button></div><div class="note" style="margin:0"><h3>Gifts</h3><p>Choose a candle for someone who deserves a quiet, beautiful moment.</p><button class="btn" data-go="gifts">Shop gifts</button></div></section>
+<section><h2>Reviews</h2><p>Customer reviews will appear here after real customers leave them.</p></section>`},
+shop(arg){const q=($("#q")||{}).value||"",s=($("#sort")||{}).value||"new";return `<section style="border:0"><h2>Shop All</h2><div class="tools"><div><label for="q">Search</label><input id="q" value="${esc(q)}" placeholder="Search candles"></div><div><label for="coll">Collection</label><select id="coll"><option value="">All</option>${COLLS.map(c=>`<option ${c===arg?"selected":""}>${c}</option>`).join("")}</select></div><div><label for="sort">Sort by</label><select id="sort"><option value="new">Newest</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></div></div><div class="grid" id="pg"></div></section>`},
+prod(id){const p=PRODUCTS.find(x=>x.id===id);if(!p)return views.p("Product not found");return `<button class="crumb" data-go="shop">Back to Shop All</button><section style="border:0" class="two"><div><div id="mainimg" style="background:var(--beige);aspect-ratio:1;display:flex;align-items:flex-end;justify-content:center;overflow:hidden">${pic(p)}</div>${(p.imgs||[]).length>1?`<div class="tools" style="margin-top:8px">${p.imgs.map(f=>`<button class="ic" style="padding:0;width:64px;height:64px;overflow:hidden" data-im="${f}" aria-label="Show this photo"><img src="/uploads/${f}" alt="" style="width:100%;height:100%;object-fit:cover"></button>`).join("")}</div>`:""}</div><div>${p.ph?'<span class="badge">Placeholder</span>':''}<h1 style="font-size:clamp(2rem,5vw,3rem)">${esc(p.name)}</h1><p class="price">${fmt(p.price)}</p><p>${p.desc}</p><p>${p.stock>0?"In stock":"Out of stock"}</p><div class="q" role="group" aria-label="Quantity"><button id="dn" aria-label="Decrease">−</button><span id="qn">1</span><button id="upq" aria-label="Increase">+</button></div><p><button class="btn" data-add="${p.id}" data-qty ${p.stock<1?"disabled":""}>Add to cart</button></p></div></section>`},
+collections(){return `<section style="border:0"><h2>Collections</h2><div class="tiles">${COLLS.map(c=>`<button class="tile" data-go="shop:${c}">${c}</button>`).join("")}</div></section>`},
+gifts(){return `<section style="border:0"><h2>Gifts</h2><p>Candles chosen for gifting.</p><div class="grid">${PRODUCTS.filter(p=>p.coll==="Gifting").map(prodCard).join("")||"<p>No gift products are published yet.</p>"}</div></section>`},
+story(){return `<section style="border:0"><h2>Our story</h2><p>The YUORA brand story will be written by the owner. Nothing here is a claim about materials, origin or certifications.</p></section>`},
+search(){return `<section style="border:0"><h2>Search</h2><p>Search candles by name or description.</p><button class="btn" data-go="shop">Open Shop All search</button></section>`},
+account(){return `<section style="border:0"><h2>Account</h2><h3>Track my order</h3><p>Enter the private order code from your order confirmation.</p><div class="tools"><input id="oc" placeholder="Order code" style="min-width:260px"><button class="btn" id="oclook">Track order</button></div><div id="oo"></div><p style="font-size:.9rem;color:var(--muted)">Customer accounts are not included in this version.</p></section>`},
+p(t){return `<section style="border:0"><h2>${esc(t)}</h2><div class="note">This page's text is provided by the owner and reviewed before launch. It is intentionally empty in the preview.</div></section>`}};
+function go(t){let [k,a]=t.split(/:(.*)/s);let h;if(k==="p")h=views.p(a);else h=(views[k]||views.home)(a);$("#view").innerHTML=h;window.scrollTo(0,0);document.title=k==="home"?"YUORA — Light Your Moments.":"YUORA";if(k==="shop")paintShop();if(k==="prod")qtyInit();if(k==="checkout")ck()}
+function paintShop(){const q=$("#q").value.toLowerCase(),c=$("#coll").value,s=$("#sort").value;let l=PRODUCTS.filter(p=>(!c||p.coll===c)&&(p.name+p.desc).toLowerCase().includes(q));if(s==="lo")l.sort((a,b)=>a.price-b.price);if(s==="hi")l.sort((a,b)=>b.price-a.price);$("#pg").innerHTML=l.length?l.map(prodCard).join(""):"<p>No candles match your search. Clear the search or choose another collection.</p>"}
+let qty=1;function qtyInit(){qty=1;$("#dn").onclick=()=>{qty=Math.max(1,qty-1);$("#qn").textContent=qty};$("#upq").onclick=()=>{qty=Math.min(10,qty+1);$("#qn").textContent=qty}}
+function add(id,n){const p=PRODUCTS.find(x=>x.id===id),l=cart.find(x=>x.id===id);const t=(l?l.n:0)+n;if(t>p.stock){alert("Only "+p.stock+" in stock.");return}l?l.n=t:cart.push({id,n});save();paint();openCart(true)}
+function paint(){$("#cnt").textContent=cart.reduce((a,l)=>a+l.n,0);const L=$("#lines");if(!cart.length){L.innerHTML="<p>Your cart is empty. Browse Shop All to add a candle.</p>";$("#tot").innerHTML="";return}
+L.innerHTML=cart.map(l=>{const p=PRODUCTS.find(x=>x.id===l.id);return `<div class="ln"><div class="th">${pic(p,"100%")}</div><div><strong>${esc(p.name)}</strong><br>${fmt(p.price)}<div class="q"><button data-m="${l.id}" aria-label="Decrease">−</button>${l.n}<button data-p="${l.id}" aria-label="Increase">+</button></div></div><button class="ic" data-rm="${l.id}">Remove</button></div>`}).join("");
+const sub=cart.reduce((a,l)=>a+l.n*PRODUCTS.find(x=>x.id===l.id).price,0);$("#tot").innerHTML=`<p style="display:flex;justify-content:space-between;margin:16px 0 4px"><span>Subtotal</span><strong>${fmt(sub)}</strong></p><p style="font-size:.85rem;color:var(--muted)">Shipping is added at checkout. The server confirms final prices and stock.</p><button class="btn" style="width:100%" data-go="checkout">Checkout</button><p style="font-size:.8rem;color:var(--muted)">Online payment only. Cash on Delivery is not offered.</p>`}
+function openCart(o){$("#drawer").classList.toggle("open",o);$("#scrim").classList.toggle("open",o);$("#drawer").setAttribute("aria-hidden",!o);if(o)$("#closeCart").focus()}
+document.addEventListener("click",e=>{const t=e.target.closest("[data-go],[data-add],[data-m],[data-p],[data-rm]");if(!t)return;
+if(t.dataset.go){openCart(false);go(t.dataset.go)}
+else if(t.dataset.add)add(t.dataset.add,t.hasAttribute("data-qty")?qty:1);
+else{const id=t.dataset.m||t.dataset.p||t.dataset.rm,l=cart.find(x=>x.id===id);if(t.dataset.rm)cart=cart.filter(x=>x.id!==id);else if(t.dataset.m){l.n--;if(l.n<1)cart=cart.filter(x=>x.id!==id)}else{if(l.n<PRODUCTS.find(x=>x.id===id).stock)l.n++}save();paint()}});
+document.addEventListener("input",e=>{if(["q","coll","sort"].includes(e.target.id))paintShop()});
+$("#cartBtn").onclick=()=>openCart(true);$("#closeCart").onclick=$("#scrim").onclick=()=>openCart(false);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")openCart(false)});
+$("#nl").addEventListener("submit",e=>{e.preventDefault();const m=$("#nlM"),v=$("#nlE").value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){m.textContent="Enter a valid email address.";return}if(!$("#nlC").checked){m.textContent="Tick the consent box to subscribe.";return}m.textContent="Newsletter signup needs the backend. Nothing was saved."});
+views.checkout=()=>{if(!cart.length)return '<section style="border:0"><h2>Checkout</h2><p>Your cart is empty. Browse Shop All to add a candle.</p></section>';const sub=cart.reduce((a,l)=>a+l.n*PRODUCTS.find(x=>x.id===l.id).price,0),sh=CFG.shipping||0;
+const f=(id,l,t,ac)=>`<div><label for="${id}">${l}</label><input id="${id}" type="${t||'text'}" autocomplete="${ac||'off'}" style="width:100%" required></div>`;
+return `<section style="border:0" class="two" style="align-items:start"><form id="ckf" novalidate><h2>Delivery details</h2>${CFG.paymentsReady?'':'<div class="note">Online payment is not set up yet. Checkout is unavailable until the owner adds payment keys.</div>'}<div style="display:grid;gap:12px">${f('cn','Full name','text','name')}${f('ce','Email','email','email')}${f('cp','Mobile number (10 digits)','tel','tel')}${f('ca','Address','text','street-address')}${f('cc','City','text','address-level2')}${f('cs','State','text','address-level1')}${f('cz','PIN code','text','postal-code')}</div><p id="cerr" role="alert" style="color:#9b2c1d"></p><button class="btn" id="pay" type="submit" ${CFG.paymentsReady?'':'disabled'}>Pay ${fmt(sub+sh)}</button><p style="font-size:.85rem">Online payment only. By paying you agree to our <button class="crumb" type="button" data-go="p:Terms and Conditions" style="margin:0">Terms</button>, <button class="crumb" type="button" data-go="p:Shipping Policy" style="margin:0">Shipping</button>, <button class="crumb" type="button" data-go="p:Returns and Refunds Policy" style="margin:0">Returns</button> and <button class="crumb" type="button" data-go="p:Privacy Policy" style="margin:0">Privacy</button> policies.</p></form><div><h2>Order summary</h2>${cart.map(l=>{const p=PRODUCTS.find(x=>x.id===l.id);return `<p>${esc(p.name)} × ${l.n} <span style="float:right">${fmt(p.price*l.n)}</span></p>`}).join('')}<p>Shipping <span style="float:right">${fmt(sh)}</span></p><p><strong>Total <span style="float:right">${fmt(sub+sh)}</span></strong></p></div></section>`};
+views.order=t=>`<section style="border:0"><h2>Order status</h2><div id="oo"></div></section>`;
+function showOrder(o,box){const L={pending_payment:'Waiting for payment confirmation',paid:'Payment confirmed',processing:'Being prepared',packed:'Packed',shipped:'Shipped',out_for_delivery:'Out for delivery',delivered:'Delivered',cancelled:'Cancelled',refund_pending:'Refund pending',refunded:'Refunded'};box.innerHTML=`<p><strong>${esc(o.num)}</strong>: ${L[o.status]||esc(o.status)}</p>${o.items.map(i=>`<p>${esc(i.name)} × ${i.n}</p>`).join('')}<p>Total ${fmt(o.total)}</p>${o.ship&&o.ship.tracking?`<p>Carrier: ${esc(o.ship.carrier)}. Tracking: ${esc(o.ship.tracking)} ${o.ship.url?`<a href="${esc(o.ship.url)}" rel="noopener" target="_blank">Track parcel</a>`:''}</p>`:''}`}
+async function look(code){const b=$("#oo");b.textContent="Looking up your order...";try{const r=await fetch("/api/order/"+encodeURIComponent(code));const j=await r.json();if(!r.ok)throw new Error(j.error);showOrder(j,b)}catch(e){b.textContent=e.message||"Order not found. Check the code and try again."}}
+function ck(){const f=$("#ckf");if(!f)return;f.onsubmit=async e=>{e.preventDefault();const err=$("#cerr"),btn=$("#pay");err.textContent="";btn.disabled=true;
+try{const customer={name:$("#cn").value,email:$("#ce").value,phone:$("#cp").value,address:$("#ca").value,city:$("#cc").value,state:$("#cs").value,pin:$("#cz").value};
+const r=await fetch("/api/checkout",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({items:cart.map(l=>({id:l.id,n:l.n})),customer})});const j=await r.json();if(!r.ok)throw new Error(j.error);
+await new Promise((ok,no)=>{if(window.Razorpay)return ok();const s=document.createElement("script");s.src="https://checkout.razorpay.com/v1/checkout.js";s.onload=ok;s.onerror=()=>no(new Error("Payment window could not load. Check your connection."));document.head.appendChild(s)});
+new Razorpay({key:j.keyId,amount:j.amount,currency:"INR",name:"YUORA",order_id:j.rzOrderId,prefill:{name:customer.name,email:customer.email,contact:customer.phone},
+handler:async resp=>{try{const v=await fetch("/api/payment/verify",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({...resp,token:j.token})});const vj=await v.json();if(!v.ok)throw new Error(vj.error);cart=[];save();paint();go("order");$("#oo").innerHTML="<p><strong>Thank you.</strong> Your order "+esc(j.num)+" is "+(vj.status==="paid"?"confirmed.":"waiting for payment confirmation.")+"</p><p>Save this private order code to track your order:</p><p><code>"+esc(j.token)+"</code></p>"}catch(x){err.textContent=x.message;btn.disabled=false}},
+modal:{ondismiss:()=>{btn.disabled=false;err.textContent="Payment was not completed. You can try again."}}}).open()}catch(x){err.textContent=x.message;btn.disabled=false}}}
+document.addEventListener("click",e=>{const im=e.target.closest("[data-im]");if(im&&$("#mainimg"))$("#mainimg").innerHTML=`<img src="/uploads/${im.dataset.im}" alt="" style="width:100%;height:100%;object-fit:cover">`;if(e.target.id==="oclook")look($("#oc").value.trim())});
+async function load(){try{const[a,b]=await Promise.all([fetch("/api/products"),fetch("/api/config")]);PRODUCTS=await a.json();CFG=await b.json();COLLS=[...new Set(PRODUCTS.map(p=>p.coll))];$(".bar").textContent=CFG.announcement||"";cart=cart.filter(l=>PRODUCTS.some(p=>p.id===l.id));save()}catch(e){$("#view").innerHTML="<p>The store could not load. Refresh the page.</p>"}}
+load().then(()=>{paint();go("home")});
+</script>
+</body>
+</html>
