@@ -101,15 +101,15 @@
   {
    "id": "pmvaq22ir",
    "created": 1792140290922,
-   "name": "Ayush",
+   "name": "Tea Light Candle",
    "desc": "",
-   "price": 200,
-   "stock": 16,
+   "price": 99,
+   "stock": 50,
    "coll": "Everyday",
    "status": "published",
-   "sku": "#ayush1",
+   "sku": "c1",
    "imgs": [
-    "c65798cb30678764bcdc51585fe63f4a.jpg"
+    ""
    ],
    "col": "#E9DED0",
    "ph": false,
