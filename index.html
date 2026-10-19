@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/jpeg" href="/logo2.jpeg" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YUORA — Light Your Moments.</title>
+<meta name="description" content="YUORA candles for thoughtful gifts and beautiful spaces. Storefront preview.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#FAF7F1;--beige:#E9DED0;--gold:#C4A36A;--brown:#786451;--char:#302B27;--white:#fff;--bg:var(--ivory);--surface:var(--white);--text:var(--char);--muted:var(--brown);--line:var(--beige);--gold-text:#8a6d36;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1b18;--surface:#2a2521;--text:#f3ece1;--muted:#cdb99c;--line:#463e37;--gold-text:#d9bb85}}
+:root[data-theme="dark"]{--bg:#1f1b18;--surface:#2a2521;--text:#f3ece1;--muted:#cdb99c;--line:#463e37;--gold-text:#d9bb85}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--sans)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0 0 .5em}
+h1{font-size:clamp(2.8rem,8vw,5.5rem)}h2{font-size:clamp(1.9rem,4vw,2.8rem)}h3{font-size:1.4rem}
+p{max-width:60ch}a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold-text);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.bar{background:var(--char);color:var(--ivory);text-align:center;font-size:.85rem;padding:8px 12px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;min-height:64px;flex-wrap:wrap}
+.logo{font-family:var(--serif);font-size:1.8rem;letter-spacing:.32em;font-weight:600;text-decoration:none;margin-right:auto;background:none;border:0;color:inherit;padding:0}
+.nav a.l,.nav button.l{background:none;border:0;color:inherit;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent}
+.nav .l:hover{border-color:var(--gold)}
+.ic{background:none;border:1px solid var(--line);color:inherit;border-radius:20px;padding:6px 14px}
+.btn{display:inline-block;background:var(--char);color:var(--ivory);border:1px solid var(--char);padding:13px 28px;text-decoration:none;border-radius:2px}
+.btn:hover{background:var(--brown);border-color:var(--brown)}
+.btn.alt{background:transparent;color:var(--text);border-color:var(--text)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:64px 0}
+.hero .art{background:var(--beige);aspect-ratio:4/5;display:flex;align-items:flex-end;justify-content:center;position:relative;overflow:hidden}
+.glow{position:absolute;left:50%;top:22%;width:70%;aspect-ratio:1;transform:translateX(-50%);background:radial-gradient(circle,rgba(196,163,106,.55),transparent 65%);animation:breathe 5s ease-in-out infinite}
+@keyframes breathe{50%{opacity:.6;transform:translateX(-50%) scale(1.08)}}
+@media (prefers-reduced-motion:reduce){.glow{animation:none}}
+.tag{font-size:.8rem;color:var(--muted);margin-top:8px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px}
+.card{background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column}
+.card .img{background:var(--beige);aspect-ratio:1;display:flex;align-items:flex-end;justify-content:center;cursor:pointer;border:0;padding:0;width:100%}
+.card .b{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .b h3{margin:0;font-size:1.3rem}
+.price{font-weight:500}.price-line{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.price-now{font-weight:600;font-size:1.12rem;color:var(--text)}.price-was{color:#8b8985;text-decoration:line-through;font-size:.95rem}.price-off{color:#39964b;font-size:.9rem;font-weight:600}
+.badge{font-size:.75rem;color:var(--gold-text);border:1px solid var(--gold);padding:1px 8px;border-radius:10px;align-self:flex-start}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.tile{background:var(--beige);color:#302B27;padding:36px 20px;font-family:var(--serif);font-size:1.5rem;border:0;text-align:left}
+.tile:hover{background:var(--gold)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+input,select{font:inherit;padding:10px 12px;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:2px;min-width:0}
+label{display:block;font-size:.9rem;margin-bottom:4px}
+details{border-bottom:1px solid var(--line);padding:16px 0}details summary{cursor:pointer;font-weight:500}details p{margin-bottom:0}.note{background:var(--beige);color:#302B27;padding:10px 14px;font-size:.9rem;margin:16px 0}
+footer{background:var(--char);color:var(--ivory);padding:48px 0 32px;margin-top:40px}
+footer a,footer button.fl{color:var(--ivory);background:none;border:0;padding:0;text-decoration:underline;display:block;margin:4px 0;text-align:left}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--bg);border-left:1px solid var(--line);z-index:30;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(20px + env(safe-area-inset-bottom,0px))}
+.drawer.open{transform:none}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:20;display:none}.scrim.open{display:block}
+.lines{flex:1;overflow:auto}
+.ln{display:grid;grid-template-columns:56px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}
+.ln .th{background:var(--beige);aspect-ratio:1}
+.q{display:inline-flex;align-items:center;gap:8px}
+.q button{width:30px;height:30px;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.crumb{background:none;border:0;color:var(--muted);padding:0;margin:24px 0 8px;text-decoration:underline}
+@media (max-width:760px){.hero,.two{grid-template-columns:1fr}.hero{padding:32px 0}.nav{gap:12px}}
+
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin:22px 0 34px}
+.team-card{border:1px solid var(--line);background:var(--surface);overflow:hidden}
+.team-photo{aspect-ratio:4/3;background:var(--beige);display:flex;align-items:center;justify-content:center;color:var(--brown);font-family:var(--serif);font-size:2.5rem;letter-spacing:.08em}
+.team-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.team-info{padding:16px}.team-info h3{font-size:1.35rem;margin:0 0 4px}.team-role{font-size:.88rem;color:var(--gold-text);margin:0 0 8px}.team-info p{font-size:.94rem;margin:0}
+.brand-logo img {
+  width: 140px;
+  height: 55px;
+  object-fit: contain;
+  display: block;
+}
+</style>
+</head>
+<body>
+<div class="bar">Free-text announcement — editable by the owner in the admin dashboard (backend stage).</div>
+<header class="top"><div class="wrap nav">
+<button class="logo" data-go="home" aria-label="YUORA home">YUORA</button>
+<nav class="nav" style="gap:18px;min-height:0" aria-label="Main">
+<button class="l" data-go="shop">Shop All</button>
+<button class="l" data-go="collections">Collections</button>
+<button class="l" data-go="gifts">Gifts</button>
+<button class="l" data-go="story">Our Story</button></nav>
+<button class="ic" data-go="search" aria-label="Search">Search</button>
+<button class="ic" data-go="account" aria-label="Account">Account</button>
+<button class="ic" id="cartBtn" aria-label="Open cart">Cart (<span id="cnt">0</span>)</button>
+</div></header>
+
+<main id="view" class="wrap" tabindex="-1"></main>
+
+<footer><div class="wrap fg">
+<div><div class="logo" style="margin:0 0 8px">YUORA</div><p>Light Your Moments.</p>
+<p style="font-size:.9rem">Support email, phone and social links: to be configured by the owner.</p></div>
+<div><strong>Shop</strong><button class="fl" data-go="shop">Shop All</button><button class="fl" data-go="collections">Collections</button><button class="fl" data-go="gifts">Gifts</button></div>
+<div><strong>Information</strong><button class="fl" data-go="story">Our Story</button><button class="fl" data-go="p:Shipping Policy">Shipping Policy</button><button class="fl" data-go="p:Returns and Refunds Policy">Returns and Refunds</button><button class="fl" data-go="p:Privacy Policy">Privacy Policy</button><button class="fl" data-go="p:Terms and Conditions">Terms and Conditions</button><button class="fl" data-go="p:FAQ">FAQ</button></div>
+<div><form id="nl" novalidate><label for="nlE"><strong>Newsletter</strong></label>
+<input id="nlE" type="email" placeholder="Email address" autocomplete="email" style="width:100%">
+<label style="margin-top:8px;display:flex;gap:8px"><input id="nlC" type="checkbox" style="min-width:auto"> I agree to receive YUORA emails and can unsubscribe any time.</label>
+<button class="btn" style="margin-top:8px" type="submit">Subscribe</button><p id="nlM" role="status" style="font-size:.85rem"></p></form></div>
+</div></footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Cart" aria-hidden="true">
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0">Your cart</h2><button class="ic" id="closeCart">Close</button></div>
+<div class="lines" id="lines"></div><div id="tot"></div></aside>
+
+<script>
+let PRODUCTS=[],COLLS=[],CFG={};
+const fmt=n=>"₹"+Number(n||0).toLocaleString("en-IN");
+function priceInfo(p){
+ const original=Number(p.originalPrice??p.original_price??p.compareAtPrice??p.compare_at_price??p.price??0);
+ const selling=Number(p.price??p.discountPrice??p.discount_price??original);
+ const percent=Number(p.discountPercent??p.discount_percent??(original>selling&&original>0?Math.round((original-selling)/original*100):0));
+ const discounted=original>selling;
+ return `<span class="price-line"><strong class="price-now">${fmt(selling)}</strong>${discounted?`<span class="price-was">${fmt(original)}</span><span class="price-off">${percent}% off</span>`:""}</span>`;
+}
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let cart=[];
+try{cart=JSON.parse(localStorage.getItem("yuora_cart")||"[]")}catch(e){cart=[]}
+function save(){try{localStorage.setItem("yuora_cart",JSON.stringify(cart))}catch(e){}}
+const pic=(p,s)=>p.imgs&&p.imgs[0]?`<img src="/uploads/${p.imgs[0]}" alt="${esc(p.name)}" loading="lazy" style="width:100%;height:100%;object-fit:cover">`:candle(p.col,s);
+function candle(c,s){return `<svg viewBox="0 0 100 120" width="${s||"60%"}" role="img" aria-label="Placeholder candle illustration" style="display:block"><ellipse cx="50" cy="38" rx="6" ry="11" fill="#C4A36A"/><rect x="49" y="46" width="2" height="8" fill="#302B27"/><rect x="22" y="54" width="56" height="58" rx="3" fill="${c}" stroke="#786451" stroke-opacity=".4"/></svg>`}
+function prodCard(p){return `<article class="card"><button class="img" data-go="prod:${p.id}" aria-label="View ${esc(p.name)}">${pic(p)}</button><div class="b">${p.ph?'<span class="badge">Placeholder</span>':''}<h3>${esc(p.name)}</h3><span class="price">${priceInfo(p)}</span><button class="btn alt" style="margin-top:auto" data-add="${p.id}">Add to cart</button></div></article>`}
+const views={
+home(){return `<section style="border:0" class="hero"><div><h1>Light Your Moments.</h1><p>Candles for thoughtful gifts and beautiful spaces.</p><button class="btn" data-go="shop">Shop the Collection</button></div><div><div class="art"><div class="glow"></div><img src="/hero.jpg" alt="YUORA Candles"
+style="width:100%;height:100%;object-fit:cover;"></div><p class="tag">Premium candles for thoughtful gifts and beautiful spaces.</p></div></section>
+<section><h2>Featured</h2><div class="grid">${PRODUCTS.slice(0,4).map(prodCard).join("")||"<p>Products will appear here once the owner publishes them.</p>"}</div></section>
+<section><h2>Collections</h2><div class="tiles">${COLLS.map(c=>`<button class="tile" data-go="shop:${c}">${c}</button>`).join("")}</div></section>
+<section><h2>Bestsellers</h2><p>Bestsellers appear here once real sales data exists.</p></section>
+<section class="two"><div><h2>Our story</h2><p>The YUORA story is written by the owner. This space is reserved for the real brand story.</p><button class="btn alt" data-go="story">Read more</button></div><div class="note" style="margin:0"><h3>Gifts</h3><p>Choose a candle for someone who deserves a quiet, beautiful moment.</p><button class="btn" data-go="gifts">Shop gifts</button></div></section>
+<section><h2>Reviews</h2><p>Customer reviews will appear here after real customers leave them.</p></section>`},
+shop(arg){const q=($("#q")||{}).value||"",s=($("#sort")||{}).value||"new";return `<section style="border:0"><h2>Shop All</h2><div class="tools"><div><label for="q">Search</label><input id="q" value="${esc(q)}" placeholder="Search candles"></div><div><label for="coll">Collection</label><select id="coll"><option value="">All</option>${COLLS.map(c=>`<option ${c===arg?"selected":""}>${c}</option>`).join("")}</select></div><div><label for="sort">Sort by</label><select id="sort"><option value="new">Newest</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></div></div><div class="grid" id="pg"></div></section>`},
+prod(id){const p=PRODUCTS.find(x=>x.id===id);if(!p)return views.p("Product not found");return `<button class="crumb" data-go="shop">Back to Shop All</button><section style="border:0" class="two"><div><div id="mainimg" style="background:var(--beige);aspect-ratio:1;display:flex;align-items:flex-end;justify-content:center;overflow:hidden">${pic(p)}</div>${(p.imgs||[]).length>1?`<div class="tools" style="margin-top:8px">${p.imgs.map(f=>`<button class="ic" style="padding:0;width:64px;height:64px;overflow:hidden" data-im="${f}" aria-label="Show this photo"><img src="/uploads/${f}" alt="" style="width:100%;height:100%;object-fit:cover"></button>`).join("")}</div>`:""}</div><div>${p.ph?'<span class="badge">Placeholder</span>':''}<h1 style="font-size:clamp(2rem,5vw,3rem)">${esc(p.name)}</h1><div class="price">${priceInfo(p)}</div><p>${p.desc}</p><p>${p.stock>0?"In stock":"Out of stock"}</p><div class="q" role="group" aria-label="Quantity"><button id="dn" aria-label="Decrease">−</button><span id="qn">1</span><button id="upq" aria-label="Increase">+</button></div><p><button class="btn" data-add="${p.id}" data-qty ${p.stock<1?"disabled":""}>Add to cart</button></p></div></section>`},
+collections(){return `<section style="border:0"><h2>Collections</h2><div class="tiles">${COLLS.map(c=>`<button class="tile" data-go="shop:${c}">${c}</button>`).join("")}</div></section>`},
+gifts(){return `<section style="border:0"><h2>Gifts</h2><p>Candles chosen for gifting.</p><div class="grid">${PRODUCTS.filter(p=>p.coll==="Gifting").map(prodCard).join("")||"<p>No gift products are published yet.</p>"}</div></section>`},
+story(){return `<section style="border:0"><h2>Our Story</h2><h4>YUORA — Light Your Moments.</h4><p>YUORA was created around a simple belief: the smallest moments can become the most meaningful when filled with warmth, fragrance, and thoughtful design. Our candles are made to bring comfort to everyday spaces, create a welcoming atmosphere, and make gifting feel personal.</p><p>We bring creativity, careful presentation, and attention to detail to every part of the experience. From product design and making to packaging and customer care, our team works together to build a brand customers can trust. Our journey is about learning, creating, and growing together—one candle and one memorable moment at a time.</p><h2>Meet the Team Behind YUORA</h2><div class="team-grid">${[{name:"Pratik Kashyap",role:"Founder & Finance",bio:"Leads the brand’s vision, financial planning, and overall direction.",file:"pratik-kashyap.jpg",initials:"PK"},{name:"Arya Rishikesh",role:"E-commerce & Photography",bio:"Manages online product presentation and product photography.",file:"arya-rishikesh.jpg",initials:"AR"},{name:"Supriya",role:"Customer Relations",bio:"Focuses on customer communication and building positive customer relationships.",file:"supriya.jpg",initials:"S"},{name:"Ayushi",role:"Customer Feedback & Reviews",bio:"Collects customer feedback and helps the team understand customer experiences.",file:"ayushi.jpg",initials:"A"},{name:"Khushi",role:"Packaging & Labelling",bio:"Looks after product packaging, labelling, and presentation.",file:"khushi.jpg",initials:"K"},{name:"Rishika",role:"Manufacturing & Photography",bio:"Contributes to product manufacturing and visual product presentation.",file:"rishika.jpg",initials:"R"},{name:"Harshit",role:"Product & Design, Finance",bio:"Works on product design and supports financial planning.",file:"harshit.jpg",initials:"H"},{name:"Ravi Ranjan",role:"Operations, Logistics & Delivery",bio:"Coordinates operational activities, logistics, and delivery processes.",file:"ravi-ranjan.jpg",initials:"RR"},{name:"Satyam",role:"Brand & Marketing",bio:"Works on brand identity, marketing strategies, and promotional activities.",file:"satyam.jpg",initials:"S"},{name:"Asutosh",role:"Market Research & Development Manager",bio:"Focuses on market research, identifying opportunities, and supporting brand development.",file:"asutosh.jpg",initials:"A"}].map(m=>`<article class="team-card"><div class="team-photo"><img src="/${m.file}" alt="${m.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.textContent='${m.initials}'"></div><div class="team-info"><h3>${m.name}</h3><p class="team-role">${m.role}</p><p>${m.bio}</p></div></article>`).join("")}</div><p class="tag">Add each team photo directly to the main YUORA-main folder using the matching filename shown in each profile.</p><h3>Our Commitment</h3><p>We aim to build YUORA through creativity, teamwork, customer feedback, and continuous learning. Every step—from developing a product to delivering it to a customer—is an opportunity to make the experience better.</p><h2>YUORA — Light Your Moments.</h2></section>`},
+search(){return `<section style="border:0"><h2>Search</h2><p>Search candles by name or description.</p><button class="btn" data-go="shop">Open Shop All search</button></section>`},
+account(){return `<section style="border:0"><h2>Account</h2><h3>Track my order</h3><p>Enter the private order code from your order confirmation.</p><div class="tools"><input id="oc" placeholder="Order code" style="min-width:260px"><button class="btn" id="oclook">Track order</button></div><div id="oo"></div><p style="font-size:.9rem;color:var(--muted)">Customer accounts are not included in this version.</p></section>`},
+p(t){
+ const key=String(t||"").toLowerCase();
+ const pages={
+ "shipping policy":{title:"Shipping Policy",body:`<p>Effective Date: 19 October 2026</p>
+ <p>YUORA aims to deliver candles and home décor products safely and efficiently.</p>
+ <h3>Order Processing</h3><p>Orders are processed after confirmation of the order and successful payment, where applicable. Processing times may vary depending on product availability, order volume and whether a product is made to order.</p>
+ <h3>Delivery Estimates</h3><p>Our estimated delivery time is 5–10 business days after dispatch, depending on the delivery location and courier service. This is an estimate and not a guaranteed delivery date.</p>
+ <h3>Shipping Charges</h3><p>Applicable shipping charges will be displayed before the order is placed. Any free-shipping offer will be subject to its stated conditions.</p>
+ <h3>Order Tracking</h3><p>Where tracking is available, tracking information will be shared with the customer through the contact details provided at checkout.</p>
+ <h3>Packaging</h3><p>YUORA takes reasonable care to package candles and home décor items to help prevent damage during transportation. Minor variations in handmade products may occur.</p>
+ <h3>Delays</h3><p>Delivery may be delayed due to weather, courier disruptions, public holidays, operational issues or other circumstances beyond our reasonable control. We will make reasonable efforts to assist customers with delayed orders.</p>
+ <h3>Incorrect Addresses</h3><p>Customers should verify their delivery address and contact details before placing an order. Additional delivery attempts or charges arising from an incorrect address may depend on the courier's terms and applicable law.</p>
+ <h3>Damaged or Incorrect Deliveries</h3><p>If your order arrives damaged, broken or incorrect, please contact us within 48 hours of delivery with your order number and photographs, where available. We will review the issue and provide an appropriate remedy.</p>
+ <h3>Contact</h3><p>For shipping-related questions, please contact YUORA using the contact information published on our website.</p>`},
+ "returns and refunds policy":{title:"Returns & Refunds Policy",body:`<p>Effective Date: 19 October 2026</p>
+ <p>At YUORA, we want every customer to receive their candles and home décor products in satisfactory condition.</p>
+ <h3>Eligible Return Requests</h3><p>Customers may request a return, replacement or refund if:</p><ul><li>The product arrives damaged or broken.</li><li>The wrong product is delivered.</li><li>The product has a manufacturing defect.</li><li>The product received materially differs from its description.</li></ul>
+ <p>Please contact us within 48 hours of delivery and provide your order number, a description of the issue and clear photographs or an unboxing video, where available.</p>
+ <h3>Non-Eligible Returns</h3><p>We generally do not accept returns for:</p><ul><li>A change of mind or a preference change after delivery.</li><li>Damage caused by misuse, improper storage or handling after delivery.</li><li>Used, burned or altered candles, except where the issue concerns a defect or another remedy required by applicable law.</li></ul><p>These exclusions do not limit any consumer rights or remedies available under applicable law.</p>
+ <h3>Return Approval and Process</h3><p>Once your request is received, our team will review the information and contact you with the next steps. If a return is approved, we will explain how the item should be returned, where applicable.</p><p>Please do not send a product back before receiving return instructions from our team.</p>
+ <h3>Refunds</h3><p>Approved refunds will be issued to the original payment method wherever possible. If that is not feasible, an alternative lawful method will be discussed with the customer.</p><p>We aim to initiate approved refunds within 7–10 business days after approval or receipt and inspection of the returned item, as applicable. Actual crediting time may depend on the payment provider or bank.</p>
+ <h3>Return Shipping Costs</h3><p>If the product is defective, damaged, incorrect or otherwise eligible for a remedy under applicable law, YUORA will arrange or reimburse reasonable return shipping costs as appropriate. For other approved returns, any applicable return-shipping cost will be communicated in advance.</p>
+ <h3>Cancellations</h3><p>Please contact us as soon as possible to request cancellation. Orders that have already been dispatched may not be cancellable through the normal process, but applicable legal rights remain unaffected.</p>
+ <h3>Contact</h3><p>For returns, replacements or refunds, contact YUORA using the contact information displayed on our website and include your order number.</p>`},
+ "privacy policy":{title:"Privacy Policy",body:`<p>Effective Date: 19 October 2026</p>
+ <p>YUORA respects your privacy and is committed to handling personal information responsibly when you visit our website or place an order.</p>
+ <h3>Information We Collect</h3><p>Depending on how you use our website, we may collect:</p><ul><li>Name and contact details, such as email address and phone number.</li><li>Shipping and billing address.</li><li>Order details and purchase history.</li><li>Information required to process payments, where applicable.</li><li>Messages, feedback and customer-support requests.</li><li>Basic technical information, such as browser and device information, where collected.</li></ul>
+ <h3>How We Use Your Information</h3><p>We use personal information to:</p><ul><li>Process and fulfil orders.</li><li>Arrange shipping and delivery.</li><li>Respond to customer enquiries.</li><li>Handle returns, refunds and replacements.</li><li>Improve our products, services and website.</li><li>Prevent fraud and protect website security.</li><li>Meet applicable legal and regulatory obligations.</li></ul>
+ <h3>Payments</h3><p>Where third-party payment services are used, payment processing is subject to the provider's terms and privacy practices. YUORA will not intentionally store full payment-card credentials unless lawfully required and appropriately secured.</p>
+ <h3>Sharing of Information</h3><p>We may share relevant information with trusted service providers, such as delivery partners, payment processors and website-hosting providers, when necessary to operate our services. We may also disclose information when required by applicable law.</p><p>We do not sell personal information to third parties as a business practice.</p>
+ <h3>Cookies and Technical Data</h3><p>Our website or its service providers may use cookies or similar technologies to support essential functionality, security and website performance. Any optional tracking or advertising technologies should be disclosed and managed as required by applicable law.</p>
+ <h3>Data Security and Retention</h3><p>We take reasonable steps to protect personal information against unauthorised access, misuse, loss or disclosure. Information is retained only for as long as reasonably necessary for the purposes described above or as required by law.</p><p>No internet-based service can guarantee absolute security.</p>
+ <h3>Your Privacy Rights</h3><p>Subject to applicable law, you may request access to, correction of or deletion of your personal information, or raise a concern about how it is handled. Some information may need to be retained for legal, accounting or order-related purposes.</p>
+ <h3>Children's Privacy</h3><p>Our website is not intended to knowingly collect personal information from children in violation of applicable law. Where required, appropriate consent and safeguards will be followed.</p>
+ <h3>Policy Updates</h3><p>We may update this Privacy Policy to reflect changes in our services or legal requirements. The revised version will be published on our website with an updated effective date.</p>
+ <h3>Contact</h3><p>For privacy-related requests, please contact YUORA through the contact details published on our website.</p>`},
+ "terms and conditions":{title:"Terms & Conditions",body:`<p>Effective Date: 19 October 2026</p><p>Welcome to YUORA. By accessing our website or placing an order, you agree to these Terms & Conditions, subject to applicable consumer protection laws.</p>
+ <h3>1. About Our Products</h3><p>YUORA offers candles and home décor products. Product images are provided for illustration and reference. Handmade items may have minor variations in colour, finish, shape or appearance.</p>
+ <h3>2. Product Information</h3><p>We make reasonable efforts to display accurate product descriptions, prices and availability. If a significant error is identified, we will communicate with the customer and handle the order appropriately under applicable law.</p>
+ <h3>3. Orders and Acceptance</h3><p>Placing an order constitutes a purchase request. An order confirmation does not necessarily mean dispatch has occurred. We may contact customers to verify order details or resolve payment and availability issues.</p><p>Any cancellation by YUORA will be handled transparently, and applicable refunds will be processed as required by law.</p>
+ <h3>4. Pricing and Payment</h3><p>Prices are displayed in Indian Rupees unless stated otherwise. Applicable taxes, shipping charges and other mandatory costs will be disclosed as required before purchase. Orders are subject to successful payment or any other payment arrangement expressly offered by YUORA.</p>
+ <h3>5. Shipping and Delivery</h3><p>Delivery estimates are indicative and may vary by location and courier availability. Shipping arrangements and applicable charges are described in our Shipping Policy.</p>
+ <h3>6. Returns and Refunds</h3><p>Return, replacement, cancellation and refund requests are governed by our Returns & Refunds Policy. Nothing in these Terms & Conditions removes consumer rights available under applicable law.</p>
+ <h3>7. Safe Use of Candles</h3><p>Candles must be used responsibly. Keep burning candles away from children, pets, curtains and other flammable materials. Never leave a burning candle unattended. Follow all safety instructions supplied with the product.</p>
+ <h3>8. Intellectual Property</h3><p>Unless otherwise stated, website text, branding, logos, product photographs and original design materials belonging to YUORA may not be copied, reproduced or commercially used without prior permission, except as permitted by law.</p>
+ <h3>9. Website Use</h3><p>You agree not to misuse the website, attempt unauthorised access, interfere with its operation or use it for unlawful purposes.</p>
+ <h3>10. Third-Party Services</h3><p>Our website may rely on third-party hosting, payment, communication or delivery services. Their services may be subject to separate terms and privacy policies.</p>
+ <h3>11. Limitation of Liability</h3><p>YUORA will not exclude or restrict liability where doing so is prohibited by law. Nothing in these Terms limits statutory consumer rights or remedies. To the extent permitted by law, we are not responsible for losses arising from circumstances reasonably beyond our control.</p>
+ <h3>12. Changes to These Terms</h3><p>We may update these Terms & Conditions when our products, services or legal obligations change. Updates will be published on this page with a revised effective date.</p>
+ <h3>13. Governing Law and Disputes</h3><p>These Terms are governed by the laws of India. Disputes will be addressed through appropriate channels in accordance with applicable Indian law and the jurisdiction of competent authorities or courts.</p>
+ <h3>14. Contact</h3><p>For questions about these Terms & Conditions, please contact YUORA through the contact details published on our website.</p>`},
+ "faq":{title:"Frequently Asked Questions (FAQ)",body:`<p>Effective Date: 19 October 2026</p>
+ <details><summary>1. What products does YUORA sell?</summary><p>YUORA offers handcrafted candles and home décor products designed for gifting, decoration, and everyday use.</p></details>
+ <details><summary>2. Are your candles handmade?</summary><p>Yes. Most YUORA candles are handcrafted, so slight variations in color, shape, or finish may occur.</p></details>
+ <details><summary>3. How long does delivery take?</summary><p>Orders are generally delivered within 5–10 business days after dispatch, depending on your location.</p></details>
+ <details><summary>4. Can I cancel my order?</summary><p>Yes, you can request cancellation before your order is dispatched. Once shipped, cancellation may not be possible.</p></details>
+ <details><summary>5. What if I receive a damaged product?</summary><p>Contact us within 48 hours of delivery with photos or an unboxing video. We'll review your request and arrange a replacement or refund where applicable.</p></details>
+ <details><summary>6. Do you accept returns?</summary><p>Returns are accepted for damaged, defective, or incorrect products, subject to our Returns & Refunds Policy.</p></details>
+ <details><summary>7. Are payments secure?</summary><p>Where third-party payment services are used, payment processing is subject to the provider's terms and privacy practices.</p></details>
+ <details><summary>8. How should I safely use a candle?</summary><p>Never leave a burning candle unattended. Keep it away from children, pets, curtains, and other flammable objects.</p></details>
+ <details><summary>9. Do you offer gift candles?</summary><p>Yes. YUORA offers candles suitable for birthdays, festivals, anniversaries, and other special occasions.</p></details>
+ <details><summary>10. How can I contact YUORA?</summary><p>You can reach us through the contact details provided on our website for any questions about orders, shipping, or products.</p></details>`}
+ };
+ const normalized=key==="returns & refunds policy"?"returns and refunds policy":key==="terms & conditions"?"terms and conditions":key;
+ const page=pages[normalized];
+ return `<section style="border:0;max-width:850px;margin:0 auto"><h2>${esc(page?page.title:t)}</h2>${page?page.body:'<p>Information page not found.</p>'}</section>`;
+}};
+function go(t){let [k,a]=t.split(/:(.*)/s);let h;if(k==="p")h=views.p(a);else h=(views[k]||views.home)(a);$("#view").innerHTML=h;window.scrollTo(0,0);document.title=k==="home"?"YUORA — Light Your Moments.":"YUORA";if(k==="shop")paintShop();if(k==="prod")qtyInit();if(k==="checkout")ck()}
+function paintShop(){const q=$("#q").value.toLowerCase(),c=$("#coll").value,s=$("#sort").value;let l=PRODUCTS.filter(p=>(!c||p.coll===c)&&(p.name+p.desc).toLowerCase().includes(q));if(s==="lo")l.sort((a,b)=>a.price-b.price);if(s==="hi")l.sort((a,b)=>b.price-a.price);$("#pg").innerHTML=l.length?l.map(prodCard).join(""):"<p>No candles match your search. Clear the search or choose another collection.</p>"}
+let qty=1;function qtyInit(){qty=1;$("#dn").onclick=()=>{qty=Math.max(1,qty-1);$("#qn").textContent=qty};$("#upq").onclick=()=>{qty=Math.min(10,qty+1);$("#qn").textContent=qty}}
+function add(id,n){const p=PRODUCTS.find(x=>x.id===id),l=cart.find(x=>x.id===id);const t=(l?l.n:0)+n;if(t>p.stock){alert("Only "+p.stock+" in stock.");return}l?l.n=t:cart.push({id,n});save();paint();openCart(true)}
+function paint(){$("#cnt").textContent=cart.reduce((a,l)=>a+l.n,0);const L=$("#lines");if(!cart.length){L.innerHTML="<p>Your cart is empty. Browse Shop All to add a candle.</p>";$("#tot").innerHTML="";return}
+L.innerHTML=cart.map(l=>{const p=PRODUCTS.find(x=>x.id===l.id);return `<div class="ln"><div class="th">${pic(p,"100%")}</div><div><strong>${esc(p.name)}</strong><br>${fmt(p.price)}<div class="q"><button data-m="${l.id}" aria-label="Decrease">−</button>${l.n}<button data-p="${l.id}" aria-label="Increase">+</button></div></div><button class="ic" data-rm="${l.id}">Remove</button></div>`}).join("");
+const sub=cart.reduce((a,l)=>a+l.n*PRODUCTS.find(x=>x.id===l.id).price,0);$("#tot").innerHTML=`<p style="display:flex;justify-content:space-between;margin:16px 0 4px"><span>Subtotal</span><strong>${fmt(sub)}</strong></p><p style="display:flex;justify-content:space-between;margin:10px 0 4px"><span>Shipping</span><strong>${fmt(CFG.shipping||0)}</strong></p><p style="display:flex;justify-content:space-between;margin:4px 0 14px"><span>Total including shipping</span><strong>${fmt(sub+(CFG.shipping||0))}</strong></p><p style="font-size:.8rem;color:var(--muted)">Final total is confirmed at checkout.</p><button class="btn" style="width:100%" data-go="checkout">Checkout</button><p style="font-size:.8rem;color:var(--muted)">Online payment only. Cash on Delivery is not offered.</p>`}
+function openCart(o){$("#drawer").classList.toggle("open",o);$("#scrim").classList.toggle("open",o);$("#drawer").setAttribute("aria-hidden",!o);if(o)$("#closeCart").focus()}
+document.addEventListener("click",e=>{const t=e.target.closest("[data-go],[data-add],[data-m],[data-p],[data-rm]");if(!t)return;
+if(t.dataset.go){openCart(false);go(t.dataset.go)}
+else if(t.dataset.add)add(t.dataset.add,t.hasAttribute("data-qty")?qty:1);
+else{const id=t.dataset.m||t.dataset.p||t.dataset.rm,l=cart.find(x=>x.id===id);if(t.dataset.rm)cart=cart.filter(x=>x.id!==id);else if(t.dataset.m){l.n--;if(l.n<1)cart=cart.filter(x=>x.id!==id)}else{if(l.n<PRODUCTS.find(x=>x.id===id).stock)l.n++}save();paint()}});
+document.addEventListener("input",e=>{if(["q","coll","sort"].includes(e.target.id))paintShop()});
+$("#cartBtn").onclick=()=>openCart(true);$("#closeCart").onclick=$("#scrim").onclick=()=>openCart(false);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")openCart(false)});
+$("#nl").addEventListener("submit",e=>{e.preventDefault();const m=$("#nlM"),v=$("#nlE").value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){m.textContent="Enter a valid email address.";return}if(!$("#nlC").checked){m.textContent="Tick the consent box to subscribe.";return}m.textContent="Newsletter signup needs the backend. Nothing was saved."});
+views.checkout=()=>{if(!cart.length)return '<section style="border:0"><h2>Checkout</h2><p>Your cart is empty. Browse Shop All to add a candle.</p></section>';const sub=cart.reduce((a,l)=>a+l.n*PRODUCTS.find(x=>x.id===l.id).price,0),sh=CFG.shipping||0;
+const f=(id,l,t,ac)=>`<div><label for="${id}">${l}</label><input id="${id}" type="${t||'text'}" autocomplete="${ac||'off'}" style="width:100%" required></div>`;
+return `<section style="border:0" class="two" style="align-items:start"><form id="ckf" novalidate><h2>Delivery details</h2>${CFG.paymentsReady?'':'<div class="note">UPI payment is not configured yet. Please try again later.</div>'}<div style="display:grid;gap:12px">${f('cn','Full name','text','name')}${f('ce','Email','email','email')}${f('cp','Mobile number (10 digits)','tel','tel')}${f('ca','Address','text','street-address')}${f('cc','City','text','address-level2')}${f('cs','State','text','address-level1')}${f('cz','PIN code','text','postal-code')}</div><p id="cerr" role="alert" style="color:#9b2c1d"></p><button class="btn" id="pay" type="submit" ${CFG.paymentsReady?'':'disabled'}>Pay ${fmt(sub+sh)}</button><p style="font-size:.85rem">UPI QR/link payment. Total includes shipping. By paying you agree to our <button class="crumb" type="button" data-go="p:Terms and Conditions" style="margin:0">Terms</button>, <button class="crumb" type="button" data-go="p:Shipping Policy" style="margin:0">Shipping</button>, <button class="crumb" type="button" data-go="p:Returns and Refunds Policy" style="margin:0">Returns</button> and <button class="crumb" type="button" data-go="p:Privacy Policy" style="margin:0">Privacy</button> policies.</p></form><div><h2>Order summary</h2>${cart.map(l=>{const p=PRODUCTS.find(x=>x.id===l.id);return `<p>${esc(p.name)} × ${l.n} <span style="float:right">${fmt(p.price*l.n)}</span></p>`}).join('')}<p>Shipping <span style="float:right">${fmt(sh)}</span></p><p><strong>Total <span style="float:right">${fmt(sub+sh)}</span></strong></p></div></section>`};
+views.order=t=>`<section style="border:0"><h2>Order status</h2><div id="oo"></div></section>`;
+function showOrder(o,box){const L={pending_payment:'Waiting for payment confirmation',paid:'Payment confirmed',processing:'Being prepared',packed:'Packed',shipped:'Shipped',out_for_delivery:'Out for delivery',delivered:'Delivered',cancelled:'Cancelled',refund_pending:'Refund pending',refunded:'Refunded'};box.innerHTML=`<p><strong>${esc(o.num)}</strong>: ${L[o.status]||esc(o.status)}</p>${o.items.map(i=>`<p>${esc(i.name)} × ${i.n}</p>`).join('')}<p>Total ${fmt(o.total)}</p>${o.ship&&o.ship.tracking?`<p>Carrier: ${esc(o.ship.carrier)}. Tracking: ${esc(o.ship.tracking)} ${o.ship.url?`<a href="${esc(o.ship.url)}" rel="noopener" target="_blank">Track parcel</a>`:''}</p>`:''}`}
+async function look(code){const b=$("#oo");b.textContent="Looking up your order...";try{const r=await fetch("/api/order/"+encodeURIComponent(code));const j=await r.json();if(!r.ok)throw new Error(j.error);showOrder(j,b)}catch(e){b.textContent=e.message||"Order not found. Check the code and try again."}}
+function ck(){const f=$("#ckf");if(!f)return;f.onsubmit=async e=>{e.preventDefault();const err=$("#cerr"),btn=$("#pay");err.textContent="";btn.disabled=true;
+try{const customer={name:$("#cn").value,email:$("#ce").value,phone:$("#cp").value,address:$("#ca").value,city:$("#cc").value,state:$("#cs").value,pin:$("#cz").value};
+const r=await fetch("/api/checkout",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({items:cart.map(l=>({id:l.id,n:l.n})),customer})});const j=await r.json();if(!r.ok)throw new Error(j.error);
+if(j.mode==='upi'){
+  cart=[];save();paint();go('order');
+  const qr='https://api.qrserver.com/v1/create-qr-code/?size=260x260&data='+encodeURIComponent(j.upiUri);
+  $("#oo").innerHTML=`<h3>Complete your UPI payment</h3><p>Order <strong>${esc(j.num)}</strong></p><p>Product subtotal: <strong>${fmt(j.subtotal)}</strong></p><p>Shipping charge: <strong>${fmt(j.shipping)}</strong></p><p style="font-size:1.2rem">Total to pay: <strong>${fmt(j.total)}</strong></p><img src="${qr}" alt="UPI QR code for ${fmt(j.total)}" style="display:block;width:260px;max-width:100%;height:auto;margin:16px auto"><p>Pay exactly <strong>${fmt(j.total)}</strong> using your UPI app.</p><p><a class="btn" href="${esc(j.upiUri)}">Open UPI app to pay</a></p><p>UPI ID: <strong>${esc(j.upiId)}</strong></p><p><strong>When your payment is successful, the name shown should be Ruchi Kumari.</strong> Please check the name before confirming payment.</p><p>After payment, send your payment screenshot to YUORA on WhatsApp. Your order remains pending until the payment is verified.</p><p><a class="btn" href="https://wa.me/${encodeURIComponent(CFG.whatsappNumber||'918984511929')}?text=${encodeURIComponent('Hi YUORA, I have paid for order '+j.num+'. Total: ₹'+j.total+'. UPI ID: '+j.upiId+'. My order tracking code is '+j.token+'. I will attach my payment screenshot here.') }" target="_blank" rel="noopener">Send payment screenshot on WhatsApp</a></p><p>Order tracking code: <code>${esc(j.token)}</code></p>`;
+  return;
+}
+throw new Error("UPI checkout response was not recognized.")}catch(x){err.textContent=x.message;btn.disabled=false}}}
+document.addEventListener("click",e=>{const im=e.target.closest("[data-im]");if(im&&$("#mainimg"))$("#mainimg").innerHTML=`<img src="/uploads/${im.dataset.im}" alt="" style="width:100%;height:100%;object-fit:cover">`;if(e.target.id==="oclook")look($("#oc").value.trim())});
+async function load(){try{const[a,b]=await Promise.all([fetch("/api/products"),fetch("/api/config")]);PRODUCTS=await a.json();CFG=await b.json();COLLS=[...new Set(PRODUCTS.map(p=>p.coll))];$(".bar").textContent=CFG.announcement||"";cart=cart.filter(l=>PRODUCTS.some(p=>p.id===l.id));save()}catch(e){$("#view").innerHTML="<p>The store could not load. Refresh the page.</p>"}}
+load().then(()=>{paint();go("home")});
+</script>
+</body>
+</html>
